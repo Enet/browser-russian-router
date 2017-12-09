@@ -1,0 +1,9 @@
+{
+  "name": "browser-russian-router",
+  "version": "0.0.1",
+  "description": "Universal javascript router for browser environment",
+  "main": "index.js",
+  "author": "Stepan Zhevak",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": false
+}
