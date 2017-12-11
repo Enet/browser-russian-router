@@ -227,7 +227,7 @@ export default class BrowserRussianRouter extends RussianRouter {
         } else if (matchObject.key) {
             return ('User/' + matchObject.key).replace(/{key}/g, navigationKey);
         } else {
-            return 'BrowserRussianRouter/' + matchObject.name;
+            return 'RussianRouter/' + matchObject.name;
         }
     }
 
