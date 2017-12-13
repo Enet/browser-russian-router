@@ -20,12 +20,12 @@ Now the package is installed and you can start using it in different environment
 
 For **ES6** modules:
 ```javascript
-import {BrowserRussianRouter} from 'russian-router';
+import {BrowserRussianRouter} from 'browser-russian-router';
 ```
 
 For **CommonJS** modules:
 ```javascript
-const {BrowserRussianRouter} = require('russian-router');
+const {BrowserRussianRouter} = require('browser-russian-router');
 ```
 
 Or you can add **UMD** bundle just to your HTML code:
