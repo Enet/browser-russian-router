@@ -86,6 +86,7 @@ export const go = (step) => {
 export default class BrowserRussianRouter extends RussianRouter {
     constructor (rawRoutes, rawOptions) {
         super(...arguments);
+        this._mapKeyToString = this._mapKeyToString.bind(this);
         this._onUriChange = this._onUriChange.bind(this);
         this.addListener('change', this._onUriChange);
         this._onUriChange({reason: 'popstate'});
@@ -136,7 +137,9 @@ export default class BrowserRussianRouter extends RussianRouter {
     }
 
     matchUri (rawUri, ...restArguments) {
-        return super.matchUri(this.resolveUri(rawUri), ...restArguments);
+        return super
+            .matchUri(this.resolveUri(rawUri), ...restArguments)
+            .map(this._mapKeyToString);
     }
 
     generateUri () {
@@ -221,6 +224,12 @@ export default class BrowserRussianRouter extends RussianRouter {
         }
     }
 
+    _mapKeyToString (matchObject) {
+        return Object.assign({}, matchObject, {
+            key: this._extractKey(matchObject)
+        });
+    }
+
     _extractKey (matchObject) {
         if (typeof matchObject.key === 'function') {
             return 'User/' + matchObject.key(matchObject, navigationKey);
@@ -236,11 +245,7 @@ export default class BrowserRussianRouter extends RussianRouter {
     }
 
     _onUriChange (event) {
-        const matchObjects = this.matchUri(location.href).map((matchObject) => {
-            return Object.assign(matchObject, {
-                key: this._extractKey(matchObject)
-            });
-        });
+        const matchObjects = this.matchUri(location.href);
         this._matchObjects = matchObjects;
         this._lastEventType = event.reason;
     }

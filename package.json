@@ -1,6 +1,6 @@
 {
   "name": "browser-russian-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Universal javascript router for browser environment",
   "main": "lib/index.js",
   "author": "Stepan Zhevak <enet@protonmail.ch> (https://zhevak.name/)",
@@ -23,7 +23,7 @@
     "url"
   ],
   "dependencies": {
-    "russian-router": "^0.0.1"
+    "russian-router": "^0.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
