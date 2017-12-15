@@ -1,0 +1,21 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "description": "Demo Example :: browser-russian-router",
+  "main": "./out/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stepan Zhevak",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "scripts": {
+    "clean": "rm -rf ./out",
+    "build": "npm run clean && webpack",
+    "watch": "npm run clean && webpack --watch",
+    "server": "npm run clean && webpack-dev-server"
+  }
+}

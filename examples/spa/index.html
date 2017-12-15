@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>SPA Example :: browser-russian-router</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                display: inline-block;
+                background: lightgrey;
+                color: blue;
+                font-weight: bold;
+                font-size: 16px;
+                text-align: center;
+                width: 16%;
+                margin: 10px 2%;
+                padding: 10px 0;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            a:hover {
+                color: darkblue;
+            }
+
+            a[data-action="replace"] {
+                color: green;
+            }
+
+            a[data-action="replace"]:hover {
+                color: darkgreen;
+            }
+
+            a[data-fn] {
+                color: red;
+            }
+
+            a[data-fn]:hover {
+                color: darkred;
+            }
+
+            #header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 190px;
+                border-bottom: 2px deepskyblue solid;
+                background: white;
+            }
+
+            #navigation {
+                font-size: 0;
+            }
+
+            #content,
+            #json {
+                margin: 10px 0;
+                padding: 10px;
+                border-top: 2px blue solid;
+                border-bottom: 2px blue solid;
+            }
+
+            #json {
+                margin-top: 200px;
+                border-color: black;
+                font-family: monospace;
+            }
+
+            #routing {
+                font-size: 24px;
+                margin: 10px;
+            }
+
+            .index {
+                height: 1000px;
+            }
+
+            .user {
+                height: 2000px;
+            }
+
+            .list {
+                height: 4000px;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <button id="routing"></button>
+            <nav id="navigation">
+                <a data-fn="back">
+                    Back
+                </a>
+                <a href="/" data-action="push">
+                    Index (push)
+                </a>
+                <a data-name="user" onclick="return {id: 1}" data-action="push">
+                    User 1 (push)
+                </a>
+                <a data-name="user" onclick="return {id: 2}" data-action="push">
+                    User 2 (push)
+                </a>
+                <a data-name="user" onclick="return {id: 3}" data-action="push">
+                    User 3 (push)
+                </a>
+                <a data-name="user" onclick="return {id: 4}" data-action="replace">
+                    User 4 (replace)
+                </a>
+                <a data-name="list" onclick="return {filter: 'A'}" data-action="replace">
+                    List A (replace)
+                </a>
+                <a data-name="list" onclick="return {filter: 'B'}" data-action="replace">
+                    List B (replace)
+                </a>
+                <a data-name="list" onclick="return {filter: 'C'}" data-action="push">
+                    List C (push)
+                </a>
+                <a data-fn="forward">
+                    Forward
+                </a>
+            </nav>
+        </header>
+        <div id="json"></div>
+        <main id="content"></main>
+        <script src="/out/index.js"></script>
+    </body>
+</html>
