@@ -1,5 +1,6 @@
 node_modules/
 dist/
 lib/
+examples/*/out/
 *-debug.log
 *.todo
