@@ -1,4 +1,8 @@
 # :ru: browser-russian-router :space_invader:
+
+[![npm version](https://img.shields.io/npm/v/browser-russian-router.svg)](https://www.npmjs.com/package/browser-russian-router)
+[![gzip size](http://img.badgesize.io/https://npmcdn.com/browser-russian-router/dist/browser-russian-router.min.js?compression=gzip)](https://npmcdn.com/browser-russian-router/dist/browser-russian-router.min.js?compression=gzip)
+
 Here is the javascript router for browser environment based on [russian-router](https://github.com/Enet/russian-router).
 
 - :tiger: [Installation](#tiger-installation)

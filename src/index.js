@@ -12,10 +12,10 @@ const globalEventEmitter = new EventEmitter();
 const emptyState = {};
 let navigationKey = 0;
 
-const scrollStorage = {
+export const scrollStorage = {
     items: {},
 
-    setItem: (uri, pageYOffset) => {
+    setItem: function (uri, pageYOffset) {
         try {
             sessionStorage.setItem('BrowserReactRouter/Scroll~' + uri, pageYOffset);
         } catch (error) {
@@ -23,7 +23,7 @@ const scrollStorage = {
         }
     },
 
-    getItem: (uri) => {
+    getItem: function (uri) {
         try {
             return +sessionStorage.getItem('BrowserReactRouter/Scroll~' + uri) || 0;
         } catch (error) {
