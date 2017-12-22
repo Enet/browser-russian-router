@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/browser-russian-router.svg)](https://www.npmjs.com/package/browser-russian-router)
 [![gzip size](http://img.badgesize.io/https://npmcdn.com/browser-russian-router/dist/browser-russian-router.min.js?compression=gzip)](https://npmcdn.com/browser-russian-router/dist/browser-russian-router.min.js?compression=gzip)
+[![test coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/Enet/russian-router)
+[![stepan zhevak](https://img.shields.io/badge/stepan-zhevak-1a8b8e.svg)](https://zhevak.name)
 
 Here is the javascript router for browser environment based on [russian-router](https://github.com/Enet/russian-router).
 
