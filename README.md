@@ -1,5 +1,7 @@
 # :ru: browser-russian-router :space_invader:
 
+<img src="https://raw.githubusercontent.com/Enet/browser-russian-router/master/browser-russian-router.svg?sanitize=true" width="210" height="210" />
+
 [![npm version](https://img.shields.io/npm/v/browser-russian-router.svg)](https://www.npmjs.com/package/browser-russian-router)
 [![gzip size](http://img.badgesize.io/https://npmcdn.com/browser-russian-router/dist/browser-russian-router.min.js?compression=gzip)](https://npmcdn.com/browser-russian-router/dist/browser-russian-router.min.js?compression=gzip)
 [![test coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/Enet/russian-router)
